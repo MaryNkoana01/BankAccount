@@ -17,8 +17,7 @@ public class Bank_Account {
         System.out.println(accountNumber +" "+ customerName + " " + accountType + " " + " " + amount);
     }
     public void deposit(float deposit){
-//        amount = amount + deposit;
-        amount += deposit;
+        amount = amount + deposit;
         System.out.println("Deposited Amount: "+ deposit);
     }
 
@@ -26,7 +25,7 @@ public class Bank_Account {
     public static void main(String[] args) {
         Bank_Account b = new Bank_Account();
         b.accountDetails(123456789,"Mary","Savings",2000);
-        b.deposit(1000);
+        b.deposit(100);
         b.display();
 
 
