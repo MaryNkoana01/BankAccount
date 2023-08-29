@@ -6,14 +6,28 @@ public class Bank_Account {
     int accountNumber;
     String accountType;
 
-    public void accountDetails(int accountNumber,float amount,String customerName,String accountType){
+    public void accountDetails(int accountNumber,String customerName,String accountType,float amount){
         this.accountNumber = accountNumber;
         this.customerName = customerName;
         this.accountType = accountType;
         this.amount = amount;
     }
 
+    public void display(){
+        System.out.println(accountNumber +" "+ customerName + " " + accountType + " " + " " + amount);
+    }
+    public void deposit(float deposit){
+//        amount = amount + deposit;
+        amount += deposit;
+        System.out.println("Deposited Amount: "+ deposit);
+    }
+
+
     public static void main(String[] args) {
+        Bank_Account b = new Bank_Account();
+        b.accountDetails(123456789,"Mary","Savings",2000);
+        b.deposit(1000);
+        b.display();
 
 
     }
