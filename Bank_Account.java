@@ -1,5 +1,3 @@
-package org.example;
-
 public class Bank_Account {
     String customerName;
     float amount;
