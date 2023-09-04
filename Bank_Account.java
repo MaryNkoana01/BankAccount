@@ -1,14 +1,30 @@
 public class Bank_Account {
-    String customerName;
-    float amount;
-    int accountNumber;
-    String accountType;
+    private String customerName;
+    private float amount;
+    private int accountNumber;
+    private String accountType;
 
     public void accountDetails(int accountNumber,String customerName,String accountType,float amount){
         this.accountNumber = accountNumber;
         this.customerName = customerName;
         this.accountType = accountType;
         this.amount = amount;
+    }
+
+    public String getCustomerName(){
+        return customerName;
+    }
+
+    public float getAmount(){
+        return amount;
+    }
+
+    public int getAccountNumber(){
+        return accountNumber;
+    }
+
+    public String getAccountType(){
+        return accountType;
     }
 
     public void deposit(float deposit){
@@ -35,13 +51,5 @@ public class Bank_Account {
     }
 
 
-    public static void main(String[] args) {
-        Bank_Account b = new Bank_Account();
-        b.accountDetails(123456789,"Mary","Savings",2000);
-        b.deposit(100);
-        b.display();
-        b.withdraw(500);
-        b.checkBalance();
 
-    }
 }
